@@ -1,0 +1,68 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+char standard [12100];
+char team [12100];
+int n;
+int m;
+
+bool accepted ()
+{
+    if ( n != m )
+        return false;
+    if ( strcmp ( standard, team ) )
+        return false;
+    return true;
+}
+
+bool presentation ()
+{
+    char temp1 [12100];
+    int index = 0;
+    for ( int i = 0; standard [i] != 0; i++ ) {
+        if( isdigit (standard [i]) )
+            temp1 [index++] = standard [i];
+    }
+    temp1 [index] = 0;
+    index = 0;
+    char temp2 [12100];
+    for ( int i = 0; team [i] != 0; i++ ) {
+        if ( isdigit (team [i]) )
+            temp2 [index++] = team [i];
+    }
+    temp2 [index] = 0;
+    if ( strcmp (temp1, temp2) == 0 )
+        return true;
+    return false;
+}
+int main ()
+{
+    int run = 0;
+    while ( scanf ("%d", &n) && n ) {
+        getchar ();
+        standard [0] = 0;
+    char temp [125];
+
+        for ( int i = 0; i < n; i++ ) {
+        gets (temp);
+            strcat (standard, temp);
+        }
+        //printf ("%s\n", standard);
+        scanf ("%d", &m);
+        getchar ();
+        team [0] = 0;
+        for ( int i = 0; i < m; i++ ) {
+       gets (temp);
+            strcat (team, temp);
+        }
+        //printf ("%s\n", team);
+        if ( accepted () )
+            printf ("Run #%d: Accepted\n", ++run);
+        else if ( presentation () )
+            printf ("Run #%d: Presentation Error\n", ++run);
+        else
+            printf ("Run #%d: Wrong Answer\n", ++run);
+    }
+    return 0;
+}

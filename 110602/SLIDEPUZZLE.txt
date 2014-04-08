@@ -1,0 +1,159 @@
+//Importujeme si všetky knižnice, ktoré budeme používať
+import java.awt.*;
+import java.awt.event.*;
+import java.awt.image.*;
+import javax.swing.*;
+import java.util.*;
+
+//Trieda Puzzle bude dediť z triedy JFrame pretože chceme vytvoriť okno typu JFrame.
+//Trieda Puzzle taktiež bude implementovat ActionListener pretože budeme potrebovať udalosti na stlačenie myši
+public class Puzzle extends JFrame implements ActionListener 
+{
+    //Zadeklarujeme si hlavný panel, na ktorom bude celá hra prebiehať
+    private JPanel hlavnýPanel;
+    
+    //Zadeklarujeme si tlačidlo, ktoré budeme používať
+    private JButton tlačidlo;
+    
+    //Zadeklarujeme si premennú "zdroj", do ktorej načítame obrázok
+    private Image zdroj;
+    
+    //Vytvoríme si pole obrázkov, do ktorého budeme ukladať posekané kúsky hlavného obrázku
+    private Image[] image = new Image[11];
+  
+    //Premenná "šírkaObrázku" a "výškaObrázku" budú uchovávať údaj o veľkosti obrázku
+    int šírkaObrázku, výškaObrázku;
+    
+    //Pole tlačidiel, v ktorom bude 12 tlačidiel, pretože budeme mať 12 kúskov obrázku
+    private JButton[] poleTlacidiel = new JButton[12];
+    
+    /*Pole, ktoré bude uchovávať údaje o tom, či jednotlivé tlačidlá majú pridelený obrázok alebo nie
+      Jedno tlačidlo vždy nebude mať pridelený obrázok */
+    private boolean[] prazdne = new boolean[12];
+    
+    //Premenná "c" bude použitá pri naplnení poľa obrázkov
+    int c = 0;
+    
+    
+    //Vytvoríme si konštruktor, ktorý nám nastaví počiatočné údaje hry
+    public Puzzle() 
+    {
+        //Vytvoríme si panel, ktorý sme vyššie zadeklarovali
+        hlavnýPanel = new JPanel();
+        
+        //Nastavíme rozloženie panela, prvý údaj bude 4, pretože budeme mať 4 riadky
+        hlavnýPanel.setLayout(new GridLayout(4, 0, 0, 0));
+        
+        //Načítame si obrázok do premennej "zdroj"
+        ImageIcon kungFuPanda = new ImageIcon(Puzzle.class.getResource("kung_fu_panda.jpg"));
+        zdroj = kungFuPanda.getImage();
+        
+        //Uložíme si šírku a výšku obrázku do premenných "šírkaObrázku" a "výškaObrázku"
+        šírkaObrázku = kungFuPanda.getIconWidth();
+        výškaObrázku = kungFuPanda.getIconHeight();
+
+        //Nastavíme vlastnosti panelu, teda okna v ktorom bude prebiehať naša hra
+        add(hlavnýPanel, BorderLayout.CENTER);
+        setSize(600, 660);
+        setTitle("Puzzle");
+        setResizable(false);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        setVisible(true);
+   
+        //Pomocou vnoreného cyklu si posekáme obrázok na 11 kúskov, pravý dolný roh obrázku necháme prázdny
+        //Týchto 11 kúskov uložíme do poľa obrázkov
+        for ( int i = 0; i < 4; i++) 
+        {
+            for ( int j = 0; j < 3; j++) 
+            {
+                if ( j == 2 && i == 3){} 
+                else 
+                {
+                    image[c] = createImage(new FilteredImageSource(zdroj.getSource(),
+                               new CropImageFilter(j*šírkaObrázku/3, i*výškaObrázku/4, 
+                              (šírkaObrázku/3)+1, výškaObrázku/4)));
+                    c++;
+                }
+            }
+        }
+        
+        //Prevedieme si pole obrázkov na kolekciu a použijeme metódu na pomiešanie prvkov poľa
+        Collections.shuffle(Arrays.asList(image));
+        
+        //Pomocou cyklu for vytvoríme 12 tlačidiel, pričom prvým jedenástim priradíme kúsky obrázkov
+        //Tlačidlám prídáme actionListener, ktorý bude načúvať či boli stlačené
+        //Pridáme tlačidlá na hlavný panel
+        //Posledné dvanáste tlačidlo necháme bez obrázku
+        for (int i = 0; i < 12; i++)
+        {
+            if (i == 11)
+            {
+                poleTlacidiel[i] = new JButton();
+                hlavnýPanel.add(poleTlacidiel[i]);
+                poleTlacidiel[i].addActionListener(this);
+                prazdne[i] = true;
+            }
+            else
+            {
+                poleTlacidiel[i] = new JButton();
+                poleTlacidiel[i].addActionListener(this);
+                prazdne[i] = false;
+                hlavnýPanel.add(poleTlacidiel[i]);
+                poleTlacidiel[i].setIcon(new ImageIcon(image[i]));
+            }
+        }
+    }
+
+    
+    // V metóde main vytvoríme našu hru Puzzle
+    public static void main(String[] args) 
+    {
+        new Puzzle();
+    }
+
+    
+    //Metóda ktorá obsluhuje kliknutie na tlačidlo
+    public void actionPerformed(ActionEvent e) 
+    {
+      //Zadeklarujeme si tlačidlo a do tohto tlačidla skopírujeme tlačidlo, ktoré bolo kliknuté  
+      JButton tlačidlo = (JButton) e.getSource();
+      
+      // Do premennej "skuska" vložíme obrázok tlačidla, ktoré bolo kliknuté
+      Icon skuska; 
+      skuska = tlačidlo.getIcon();
+      
+      //Premenná "moze" zabezpečuje to, aby sa nepriradila premenná "prazdne" tlačidlu, ktoré prázdne nie je
+      /*Ak klikneme na tlačidlo, ktoré sa posunie do prázdneho miesta (do prázdneho miesta sa môžu premiestniť len tlačidlá, ktoré sú okolo tohto prázdneho miesta)
+        tak sa premenná "moze" zmení na true a to bude signál, aby sa zmenila aj pozícia prázdneho miesta */
+      boolean moze = false;
+      
+      /*Pomocou cyklu prejdeme všetky tlačidlá, zistíme ktoré z nich je prázdne a ak je tlačidlo, na ktoré sme klikli niekde okolo tohto prázdneho tlačidla tak sa 
+        nám vymenia obrázky, to znamená, že sa zoberie obrázok z tlačidla, na ktoré sme klikli a vloží sa do tlačidla ktoré nemalo žiadny obrázok */
+      for (int i = 0; i < 12; i++)
+      {
+          if (prazdne[i] == true)
+          { 
+              if (((i > 2) && (poleTlacidiel[(i - 3)].equals(tlačidlo)))||
+                 ((((i - 1) != 2) && (i > 0) && ((i - 1) != 5) && ((i - 1) != 8)) && (poleTlacidiel[(i - 1)].equals(tlačidlo)))||
+                 ((i < 9) && (poleTlacidiel[(i + 3)].equals(tlačidlo)))||
+                 ((((i + 1) != 3) && (i < 11) && ((i + 1) != 6) && ((i + 1) != 9)) && (poleTlacidiel[(i + 1)].equals(tlačidlo))))
+                 {
+                    poleTlacidiel[i].setIcon(skuska);
+                    prazdne[i] = false;
+                    tlačidlo.setIcon(null);
+                    moze = true;
+                }
+          }  
+      }
+           
+      //zistíme, na ktoré tlačidlo v poli sme klikli, a keď je premenná "moze" nastavená na true tak zmeníme pozíciu prázdneho miesta  
+      for (int i = 0; i < 12; i++)
+      {
+          if ((tlačidlo).equals(poleTlacidiel[i]) && (moze == true))
+          {
+              prazdne[i] = true; moze = false;
+          }
+      }
+    }
+}
