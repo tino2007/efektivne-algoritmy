@@ -1,4 +1,4 @@
 efektivne-algoritmy
 ===================
 
-Ludia posielajte zdrojaky nie prezentacie a wordacke dokumenty.
+Ludia posielajte okomentovane zdrojaky nie prezentacie a wordacke dokumenty.
