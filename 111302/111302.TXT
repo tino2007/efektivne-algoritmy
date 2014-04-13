@@ -1,0 +1,47 @@
+Po naèítaní súradníc musím skontrolova, èi sú rôzne. 
+Ak sú X aj Y súradnice rovnaké dåka je 0.0.
+Ak sú X zhodne, zistím èi ich poloha je mimo priestoru, ktorı pokrıva gu¾a o polomere r.
+	Ak sú mimo gule ako dåku lana vrátim absolútnu hodnotu rozdielu súradníc Y1 a Y2.
+	Ak sa ich súradnice nachádzajú v guli skontrolujem umiestnení Y súradníc.
+		Ak sú Y súradnice umiestnene tak, e priamka medzi bodmi X1,Y1 a X2,Y2 neprechádza gu¾ou, vrátim absolútnu hodnotu rozdielu súradníc Y1 a Y2.
+		V opaènom prípade treba pod¾a naèítanıch súradníc a polomeru prepoèíta dåku lana, ktoré prechádza okolo gule. Budem to rieši v metóde nakoniec.
+
+Ak sú zhodne Y súradnice prehodím ich s X a vıpoèet vrátim na zaèiatok.
+
+Ak nie sú zhodne, potom:
+  double slope = (double)(y1 - y2) / (double)(x1 - x2);  
+  double intercept = y1 - slope * x1;  
+  double distance = fabs(intercept) * cos(atan(fabs(slope)));  
+  
+   if (distance < r)  
+    {  
+        double yIntersection = intercept / (slope * slope + 1.0);  
+        if ((y1 - yIntersection) * (y2 - yIntersection) >= 0.0)  
+            return sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2));  
+        else  
+          return vola sa metóda na vıpoèet lana okolo gule 
+    }  
+    else  
+        return sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2)); 
+
+
+//nie som si istı èi je to dobre
+
+Metoda na vıpoèet lana okolo gule
+ako prvé si vypoèítame pomocne body
+
+double a = sqrt(x1 * x1 + y1 * y1); // pomocnı bod X 
+double b = sqrt(x2 * x2 + y2 * y2); // pomocnı bod Y 
+double c = sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2)); 
+
+double C = acos((a * a + b * b - c * c) / (2.0 * a * b));  
+
+double angleMP = acos(r / a);  
+  
+double angleNQ = acos(r / b);  
+  
+double length = r * (C - angleMP - angleNQ);  
+  
+length += (sqrt(a * a - r * r) + sqrt(b * b - r * r));  
+  
+ return length; 
