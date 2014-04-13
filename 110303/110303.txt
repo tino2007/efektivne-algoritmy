@@ -1,0 +1,44 @@
+﻿#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+int compare (const void * a, const void * b)
+{
+  return ( *(char*)a - *(char*)b );
+}
+
+int main()
+{
+    char riadok1[1010], riadok2[1010];
+    int i,j;
+    char rovnake[1010]="";
+
+    for(;;)
+    {
+        if (gets(riadok1)==NULL) break;
+        gets(riadok2);
+
+        strcpy(rovnake,"");
+
+        for (i=0; i<strlen(riadok1); i++)
+        {
+            for (j=0; j<strlen(riadok2); j++)
+            {
+                if (riadok1[i]==riadok2[j])
+                {
+                        sprintf(rovnake, "%s%c",rovnake, riadok1[i]);
+                        riadok1[i]='*';
+                        riadok2[j]='&';
+
+                        //break;
+                }
+            }
+        }
+
+        qsort (rovnake, strlen(rovnake), sizeof(char), compare);
+        printf("%s\n",rovnake);
+
+    }
+    return 0;
+}
