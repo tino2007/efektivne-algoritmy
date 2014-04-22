@@ -1,5 +1,7 @@
 # coding=utf-8
 
+import os
+
 tasks = u'''
 1.1 110101 100 The 3n + 1 problem Owen Astrakan
 1.2 110102 10189 Minesweeper Pedro Demasi
@@ -145,7 +147,6 @@ Martin Jančo        110702    2   110703    1
 tasks = [task for task in tasks.split('\n') if task]
 task_dict = {}
 
-
 for task in tasks:
     splitted = task.split(' ', 3)
 
@@ -158,11 +159,16 @@ for task in tasks:
 
 
 lines = [line.split() for line in data.split(u'\n') if line]
-
 nazov = 'Nazov'
 uloha = 'Odkaz'
 obtiaznost = 'Obtiaznost'
 student = 'Student'
+hotove = 'Hotove'
+root = os.path.abspath(os.path.dirname(__file__))
+
+def existuje(idx):
+    return 'Ano' if os.path.isdir(os.path.join(root, idx)) else 'Nie'
+
 
 print '|',
 print nazov.ljust(41),
@@ -172,6 +178,8 @@ print '|',
 print obtiaznost.ljust(11),
 print '|',
 print student.ljust(17),
+print '|',
+print hotove.ljust(8),
 print '|'
 print '|',
 print 41 * '-',
@@ -181,8 +189,9 @@ print '|',
 print 11 * '-',
 print '|',
 print 17 * '-',
+print '|',
+print 8 * '-',
 print '|'
-
 
 for name, lastname, id1, level1, id2, level2 in lines:
     fullname = u'{0} {1}'.format(name, lastname)
@@ -195,6 +204,8 @@ for name, lastname, id1, level1, id2, level2 in lines:
     print level1.ljust(11, ' '),
     print '|',
     print fullname.ljust(17, ' '),
+    print '|',
+    print existuje(id1).ljust(8),
     print '|'
     print '|',
     print task_dict[id2].ljust(41),
@@ -204,6 +215,6 @@ for name, lastname, id1, level1, id2, level2 in lines:
     print level2.ljust(11, ' '),
     print '|',
     print fullname.ljust(17, ' '),
+    print '|',
+    print existuje(id2).ljust(8),
     print '|'
-
-
