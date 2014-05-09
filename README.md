@@ -41,10 +41,10 @@ Zoznam
 | 15-Puzzle Problem Shahriar Manzoor        | [110802](/110802/) | 3           | Ján Maár          | Nie      |
 | Self-describing Sequence Shahriar Manzoor | [110607](/110607/) | 2           | Matúš Marko       | Nie      |
 | Dermuba Triangle Arun Kishore             | [111207](/111207/) | 2           | Matúš Marko       | Nie      |
-| Light                                     | [110701](/110701/) | 1           | Jozef Medveď      | Nie      |
-| Knights of the Round Table Pedro Demasi   | [111303](/111303/) | 2           | Jozef Medveď      | Nie      |
-| The Trip Gordon Cormack                   | [110103](/110103/) | 1           | Tomáš Nguyen      | Nie      |
-| Where’s Waldorf? Gordon Cormack           | [110302](/110302/) | 2           | Tomáš Nguyen      | Nie      |
+| Light                                     | [110701](/110701/) | 1           | Jozef Medveď      | Ano      |
+| Knights of the Round Table Pedro Demasi   | [111303](/111303/) | 2           | Jozef Medveď      | Ano      |
+| The Trip Gordon Cormack                   | [110103](/110103/) | 1           | Tomáš Nguyen      | Ano      |
+| Where’s Waldorf? Gordon Cormack           | [110302](/110302/) | 2           | Tomáš Nguyen      | Ano      |
 | Stack ’em Up Gordon Cormack               | [110205](/110205/) | 1           | Matúš Novysedlák  | Nie      |
 | Yahtzee Gordon Cormack                    | [110208](/110208/) | 3           | Matúš Novysedlák  | Nie      |
 | Common Permutation Shahriar Manzoor       | [110303](/110303/) | 1           | Peter Otto        | Ano      |
