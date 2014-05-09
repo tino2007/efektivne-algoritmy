@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+
+int main()
+{
+	double a ,b ,c ,r ,s ,s2 ,area;
+
+	while (scanf("%lf %lf %lf",&a,&b,&c) != EOF)
+	{
+
+		s = ( a + b + c ) / 2.0; // výpoèet polovice obvodu trojuholnika
+		area = sqrt(s * (s-a) * (s-b) * (s-c)); // výpoèet obsahu trojuholnika pomocou Heronovho vzorca kde s=o/2
+
+		s2 = a + b + c; // obvod trojuholnika
+		
+		r = 2.0 * area  / s2; // radius kruhu vypoèítame 2*obsah trojuholnika deleno jeho obvod
+ 
+		printf("The radius of the round table is: %.3lf\n",r);
+
+	}
+
+	return 0;
+}
