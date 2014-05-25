@@ -19,8 +19,8 @@ Zoznam
 | Cutting Sticks Manuel Carro               | [111105](/111105/) | 2           | Matej Brašeň      | Nie      |
 | Slash Maze Miguel Revilla                 | [110904](/110904/) | 2           | Martin Brzula     | Nie      |
 | Playing With Wheels Shahriar Manzoor      | [110902](/110902/) | 2           | Martin Brzula     | Nie      |
-| Contest Scoreboard Gordon Cormack         | [110207](/110207/) | 1           | Juraj Bubniak     | Nie      |
-| Crypt Kicker Gordon Cormack               | [110204](/110204/) | 2           | Juraj Bubniak     | Nie      |
+| Contest Scoreboard Gordon Cormack         | [110207](/110207/) | 1           | Juraj Bubniak     | Ano      |
+| Crypt Kicker Gordon Cormack               | [110204](/110204/) | 2           | Juraj Bubniak     | Ano      |
 | Freckles Gordon Cormack                   | [111001](/111001/) | 2           | Ján Fekeš         | Nie      |
 | CDVII Gordon Cormack                      | [110406](/110406/) | 2           | Ján Fekeš         | Nie      |
 | How Many Fibs? Rujia Liu                  | [110601](/110601/) | 1           | Peter Franček     | Nie      |
@@ -53,8 +53,8 @@ Zoznam
 | Poker Hands Gordon Cormack                | [110202](/110202/) | 2           | Radoslav Rajčan   | Ano      |
 | WERTYU Gordon Cormack                     | [110301](/110301/) | 1           | Matej Tepper      | Nie      |
 | Steps Gordon Cormack                      | [110608](/110608/) | 2           | Matej Tepper      | Nie      |
-| Reverse and Add Erick Moreno              | [110502](/110502/) | 1           | Ján Turský        | Nie      |
-| Ones Gordon Cormack                       | [110504](/110504/) | 2           | Ján Turský        | Nie      |
+| Reverse and Add Erick Moreno              | [110502](/110502/) | 1           | Ján Turský        | Ano      |
+| Ones Gordon Cormack                       | [110504](/110504/) | 2           | Ján Turský        | Ano      |
 | Jolly Jumpers Gordon Cormack              | [110201](/110201/) | 1           | Štefan Ušák       | Ano      |
 | Rope Crisis in Ropeland! Shahriar Manzoor | [111302](/111302/) | 2           | Štefan Ušák       | Ano      |
 | Carmichael Numbers Manuel Carro           | [110702](/110702/) | 2           | Martin Jančo      | Nie      |
