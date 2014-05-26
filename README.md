@@ -28,8 +28,8 @@ Zoznam
 | Hartals Shahriar Manzoor                  | [110203](/110203/) | 2           | Pavel Jančiar     | Nie      |
 | Tug of War Gordon Cormack                 | [110805](/110805/) | 2           | Jakub Jurčík      | Ano      |
 | Factovisors Gordon Cormack                | [110704](/110704/) | 2           | Jakub Jurčík      | Ano      |
-| Crypt Kicker II Gordon Cormack            | [110304](/110304/) | 2           | Nikoleta Kabáčová | Nie      |
-| File Fragmentation Gordon Cormack         | [110306](/110306/) | 2           | Nikoleta Kabáčová | Nie      |
+| Crypt Kicker II Gordon Cormack            | [110304](/110304/) | 2           | Nikoleta Kabáčová | Ano      |
+| File Fragmentation Gordon Cormack         | [110306](/110306/) | 2           | Nikoleta Kabáčová | Ano      |
 | The 3n + 1 problem Owen Astrakan          | [110101](/110101/) | 1           | Peter Kajan       | Ano      |
 | Stacks of Flapjacks Owen Astrakan         | [110402](/110402/) | 2           | Peter Kajan       | Ano      |
 | Automated Judge Script Pedro Demasi       | [110305](/110305/) | 1           | Ján Maár          | Ano      |
