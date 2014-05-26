@@ -16,8 +16,8 @@ Zoznam
 | Playing With Wheels Shahriar Manzoor      | [110902](/110902/) | 2           | Martin Brzula     | Nie      |
 | Contest Scoreboard Gordon Cormack         | [110207](/110207/) | 1           | Juraj Bubniak     | Ano      |
 | Crypt Kicker Gordon Cormack               | [110204](/110204/) | 2           | Juraj Bubniak     | Ano      |
-| Freckles Gordon Cormack                   | [111001](/111001/) | 2           | Ján Fekeš         | Nie      |
-| CDVII Gordon Cormack                      | [110406](/110406/) | 2           | Ján Fekeš         | Nie      |
+| Freckles Gordon Cormack                   | [111001](/111001/) | 2           | Ján Fekeš         | -        |
+| CDVII Gordon Cormack                      | [110406](/110406/) | 2           | Ján Fekeš         | -        |
 | How Many Fibs? Rujia Liu                  | [110601](/110601/) | 1           | Peter Franček     | Nie      |
 | Summation of Four Primes Shahriar Manzoor | [110705](/110705/) | 2           | Peter Franček     | Nie      |
 | Check the Check Pedro Demasi              | [110107](/110107/) | 1           | Ladislav Gubala   | Nie      |
