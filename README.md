@@ -3,11 +3,6 @@ efektivne-algoritmy
 
 Ludia posielajte okomentovane zdrojaky nie prezentacie a wordacke dokumenty.
 
-Kniha
------
-
-https://mega.co.nz/#!WgJWWAwD!Klkmx06TobnChUCCiOyjvOGiK7sbqkza2pePuomTDfQ
-
 Zoznam
 ------
 
