@@ -160,11 +160,7 @@ class Main {
 
     private static final char STAR = '*';
 
-    /*
-     * Partition on number of letters and then on number of similar letters.
-     * (e.g. football, number of letters:8, similar letters: 2 for o + 2 for l
-     * equals 4.
-     */
+    // rozdelenie na pocet pismen a poton na pocet podobnych pismen
     private final Map<Integer, Map<Integer, List<Word>>> dict = new HashMap<Integer, Map<Integer, List<Word>>>();
 
     // desifrovacia mapa pismeno => pismeno
@@ -173,7 +169,7 @@ class Main {
     // sifrovacia mapa pismeno => pismeno
     private final Map<Character, Character> encryptDict = new HashMap<Character, Character>();
 
-    // Indication whether backtrack algorithm should continue or stop.
+    // oznacuje ci sa backtrack uz ma skoncit alebo nie
     private boolean backtrackFinished = false;
 
     public static void main(String[] args) {
@@ -183,44 +179,48 @@ class Main {
 
     private void begin() {
 
+        // citame zo vstupu
         Scanner sc = new Scanner(System.in);
+
+        // na prvom riadku sa nachadza pocet zaznamov, tak ho len pretypujme na int
         int length = Integer.valueOf(sc.nextLine());
 
-        // Read the dictionary words.
+        // mnozina pre slova slovnika
         Set<String> isWordReadSet = new HashSet<String>();
 
         for (int i = 0; i < length; ++i) {
 
+            // ziskame dalsi riadok kde sa nachadza slovo
             String s = sc.nextLine();
             Word word = new Word(s);
 
-            // Avoid duplicated dictionary words.
+            // pridavame do slovnika unikatne slova
             if (isWordReadSet.contains(s)) {
                 continue;
             } else {
                 isWordReadSet.add(s);
             }
 
-            // Assign * to all letters of dictionary words.
+            // kazdemu znaku zo slovnikovych slov pridame hviezdicku
             for (int ii = 0; ii < s.length(); ++ii) {
                 encryptDict.put(s.charAt(ii), STAR);
             }
 
-            // Assign the dictionary word to the correct partition,
-            // for efficient search capability.
+            // mapa pre rozdelenie slovnikovych slov
+            // kluc je pocet podobnych pismen hodnota je slovnik slov
             Map<Integer, List<Word>> wordsMap = dict.get(s.length());
 
             if (wordsMap == null) {
-
+                // pokial este mapa neexistuje pre dane slovo, vytvorme ju
                 wordsMap = new HashMap<Integer, List<Word>>();
                 List<Word> words = new LinkedList<Word>();
                 words.add(word);
                 wordsMap.put(word.getNbrSimilarLetters(), words);
                 dict.put(s.length(), wordsMap);
             } else {
-
+                // pokial mapa existuje tak ziskajme z nej slova
+                // ak slova neexistuju tak ich vytvorme
                 List<Word> words = wordsMap.get(word.getNbrSimilarLetters());
-
                 if (words == null) {
                     words = new LinkedList<Word>();
                     wordsMap.put(word.getNbrSimilarLetters(), words);
@@ -229,7 +229,8 @@ class Main {
             }
         }
 
-        // Read the encrypted lines and decrypt using backtracking algorithm.
+        // po naplneni slovniku uz nasleduju sifrovane riadky
+        // riadok po riadku ich desifrujeme pomocou backtrack algoritmu
         while (sc.hasNextLine()) {
 
             String line = sc.nextLine();
@@ -240,21 +241,24 @@ class Main {
 
     private String decrypt(String line) {
 
-        // Read the unique words.
+        // nacitame iba unikatne slova
         StringTokenizer st = new StringTokenizer(line);
         Map<String, Word> uniqueWords = new HashMap<String, Word>();
 
+        // vycistime desifrovaci slovnik
         decryptDict.clear();
 
+        // prechadzame jednotlivymi tokenmi riadku
         while (st.hasMoreTokens()) {
 
             String s = st.nextToken();
 
             if (uniqueWords.get(s) == null) {
 
+                // naplnime mapu unikatnych slov
                 uniqueWords.put(s, new Word(s));
 
-                // Assign * to the letters of the encrypted words.
+                // priradime hviezdicku znakom zasifrovanych slov
                 for (int i = 0; i < s.length(); ++i) {
                     decryptDict.put(s.charAt(i), STAR);
                 }
@@ -265,7 +269,7 @@ class Main {
         backtrackFinished = false;
         backtrack(words, decryptDict, encryptDict, 0);
 
-        // Decrypt each letter of the encrypted line.
+        // postupne desifrujeme kazde pismeno riadku
         StringBuilder sb = new StringBuilder();
 
         for (int i = 0; i < line.length(); ++i) {
@@ -285,7 +289,7 @@ class Main {
                            Map<Character, Character> decryptDict,
                            Map<Character, Character> encryptDict, int wordIndex) {
 
-        // If a solution is found then process the solution and return.
+        // pokial sme uz nasli riesenie, tak ho spracujeme a koncime
         if (wordIndex >= words.size()) {
             processSolution(decryptDict);
             return;
@@ -293,7 +297,7 @@ class Main {
 
         Map<Character, Character> l2lDecrypt = new HashMap<Character, Character>(decryptDict);
 
-        // Find the candidates.
+        // hladame kandidatov na riesenie
         Word word = words.get(wordIndex);
         String origText = word.getText();
         StringBuilder text = new StringBuilder();
@@ -306,14 +310,13 @@ class Main {
         List<Word> candidates = getCandidates(word, encryptDict);
         word.setTextWithoutParsing(origText);
 
-        // Backtrack for the found candidates.
+        // backtrack na vyhladanie kandidatov
         for (Word candidate : candidates) {
 
             String cndText = candidate.getText();
-            Map<Character, Character> l2lEncrypt = new HashMap<Character, Character>(
-                    encryptDict);
+            Map<Character, Character> l2lEncrypt = new HashMap<Character, Character>(encryptDict);
 
-            // Fill in the letter to letter dictionaries with the new finding.
+            // naplnime slovniky novymi vysledkami
             for (int i = 0; i < origText.length(); i++) {
                 l2lDecrypt.put(origText.charAt(i), cndText.charAt(i));
                 l2lEncrypt.put(cndText.charAt(i), origText.charAt(i));
@@ -321,6 +324,7 @@ class Main {
 
             backtrack(words, l2lDecrypt, l2lEncrypt, wordIndex + 1);
 
+            // koncime
             if (backtrackFinished) {
                 return;
             }
@@ -329,6 +333,7 @@ class Main {
 
     private void processSolution(Map<Character, Character> decryptDict) {
 
+        // nasli sme riesenie, koncime backtrack algoritmus
         this.decryptDict = decryptDict;
         backtrackFinished = true;
     }
@@ -337,21 +342,21 @@ class Main {
 
         List<Word> candidates = new LinkedList<Word>();
 
-        // Search on word length.
+        // hladame na dlzke slova
         Map<Integer, List<Word>> wordsMap = dict.get(word.getLength());
 
         if (wordsMap == null) {
             return candidates;
         }
 
-        // Search on similar letters.
+        // hladame na podobnych pismenach
         List<Word> words = wordsMap.get(word.getNbrSimilarLetters());
 
         if (words == null) {
             return candidates;
         }
 
-        // Search for all possible candidates.
+        // prehladavame vsetkych moznych kandidatov
         for (Word w : words) {
 
             if (w.equals(word, l2lEncrypt)) {
