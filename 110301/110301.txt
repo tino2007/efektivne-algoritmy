@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+    char riadok[200];
+    char *znaky= "  `1234567890-=QWERTYUIOP[]\\ASDFGHJKL;'ZXCVBNM,./";
+    char znak;
+    int i,j;
+
+    while (gets(riadok)!=NULL)
+    {
+        for (i=0; i<strlen(riadok); i++)
+        {
+            znak=riadok[i];
+            for (j=1; j<strlen(znaky); j++)
+            {
+                if (znak==znaky[j])
+                {
+                    putchar(znaky[j-1]);
+                }
+            }
+
+        }
+        putchar('\n');
+
+    }
+    return 0;
+}
