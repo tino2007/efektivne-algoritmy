@@ -51,8 +51,8 @@ Zoznam
 | Shoemaker’s Problem Alex Gevak            | [110405](/110405/) | 2           | Peter Otto        | Ano      |
 | Minesweeper Pedro Demasi                  | [110102](/110102/) | 1           | Radoslav Rajčan   | Ano      |
 | Poker Hands Gordon Cormack                | [110202](/110202/) | 2           | Radoslav Rajčan   | Ano      |
-| WERTYU Gordon Cormack                     | [110301](/110301/) | 1           | Matej Tepper      | Nie      |
-| Steps Gordon Cormack                      | [110608](/110608/) | 2           | Matej Tepper      | Nie      |
+| WERTYU Gordon Cormack                     | [110301](/110301/) | 1           | Matej Tepper      | Ano      |
+| Steps Gordon Cormack                      | [110608](/110608/) | 2           | Matej Tepper      | Ano      |
 | Reverse and Add Erick Moreno              | [110502](/110502/) | 1           | Ján Turský        | Ano      |
 | Ones Gordon Cormack                       | [110504](/110504/) | 2           | Ján Turský        | Ano      |
 | Jolly Jumpers Gordon Cormack              | [110201](/110201/) | 1           | Štefan Ušák       | Ano      |
