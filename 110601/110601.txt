@@ -1,0 +1,13 @@
+Do pola na prve dva indexy zapiseme cisla 1 a 2. Podla tychto cisel program dopocita ostatne cisla fibonaciho postupnosti podla vzorca x=y*z kde y je prvy prvok pola, 
+z je druhy prvok pola a x je treti prvok pola. Index tychto prvkov sa po kazdom vypocte inkrementuje o 1 az do vtedy, kym vysledne cislo nieje vacsie alebo rovne 10 na 100.
+Potom si program vypyta zadanie 2 cisel (c a d), kde c je pociatocne (mensie) cislo prehladavania a d (vyssie) je koncove cislo prehladavania.
+Pomocou podmienky zistime ci zadane cisla niesu rovne 0, pokial ano program vypise doterajsie vysledky a ukonci sa, pokial nie tak pokracuje dalej. 
+Dalej zisti ci nahodou prve cislo nieje rovne druhemu cislu. pokial ano, tak medzi nimi neexistuje ziadne cislo a tak si program vypyta dalsie cisla a tieto vynecha.
+
+Program v poli vyhladava c (mensie) cislo, 
+az pokial nenajde cislo vacsie alebo rovne, ako cislo c a za pameta si cislo indexu. Potom hlada od tohto cisla dalej cislo, ktore je vacsie alebo rovne ako zadane cislo d. 
+Pokial je d vacsie, ako najdene cislo, tak od cisla indexu odcitame 1 (kedze toto cislo uz nespada do fibonaciho cisel, ktore sa nachadzaju medzi zadanymi cislami). 
+Poradove cislo prveho indexu odcitame od poradoveho cisla druheho indexu a vyde nam pocet fibonaciho cisel medzi zadanymi cislami. Pricom cislovanie indexov sa zacina od cisla 0, 
+cize k vyslednemu cislu pripocitame cislo 1. Toto cislo sa vypise na konci programu po tom cco boli zadane ako pociatocne cisla 0 a 0.
+
+

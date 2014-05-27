@@ -1,0 +1,10 @@
+1)	Zadáme èíslo. 
+2)	Skontrolujeme èi je zadané èíslo rovné 0
+ak áno tak program vypíše predchádzajúce rozklady, pokia¾ nie tak pokraèujeme na krok 3.
+3)	Skontrolujeme èi je zadané èíslo väèšie alebo rovné 4 (tım docielime, èi je vôbec moné toto èíslo rozdeli na súèet štyroch èísel)
+pokia¾  nie, tak toto èíslo je neplatné a èakáme na ïalší vstup, pokia¾  áno pokraèujeme na krok 4.
+4)	 Toto èíslo vydelíme èíslom 2 a pokraèujeme na krok 5.
+5)	Skontrolujeme, èi je èíslo desatinné, pokia¾  áno tak ho zaokrúhlime na celé èíslo
+6)	 Toto èíslo odèítame od zadaného èísla. (súèet tıchto 2 èísel je rovnı zadanému èíslu)
+7)	Aplikujeme kroky 4, 5 a 6 pre èísla ktoré sme získali v kroku 6
+8)	Dostaneme štyri èísla, ktorıch súèet je zhodnı so zadanım èíslom. a program pokraèuje znovu na krok 1
