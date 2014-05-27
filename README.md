@@ -18,8 +18,8 @@ Zoznam
 | Crypt Kicker Gordon Cormack               | [110204](/110204/) | 2           | Juraj Bubniak     | Ano      |
 | Freckles Gordon Cormack                   | [111001](/111001/) | 2           | Ján Fekeš         | -        |
 | CDVII Gordon Cormack                      | [110406](/110406/) | 2           | Ján Fekeš         | -        |
-| How Many Fibs? Rujia Liu                  | [110601](/110601/) | 1           | Peter Franček     | Nie      |
-| Summation of Four Primes Shahriar Manzoor | [110705](/110705/) | 2           | Peter Franček     | Nie      |
+| How Many Fibs? Rujia Liu                  | [110601](/110601/) | 1           | Peter Franček     | Ano      |
+| Summation of Four Primes Shahriar Manzoor | [110705](/110705/) | 2           | Peter Franček     | Ano      |
 | Check the Check Pedro Demasi              | [110107](/110107/) | 1           | Ladislav Gubala   | Nie      |
 | Interpreter Gordon Cormack                | [110106](/110106/) | 2           | Ladislav Gubala   | Nie      |
 | Hanoi Tower Troubles Again! Rujia Liu     | [110908](/110908/) | 3           | Ivan Hraško       | Ano      |
