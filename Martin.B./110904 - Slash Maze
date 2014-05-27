@@ -1,0 +1,108 @@
+/*
+ 
+ Nacitame velkost pola, vytvorime 2x tak velke pole +1 a oznacim okraje pomocou # a vyplnime pole podla zadania
+ Prechadzame kazde policko okolo vybraneho policka a zistujeme ci sa tam uz nachadza "stena", alebo sme tam uz boli,
+ alebo je tato cesta volna. Zaroven zapisujeme dlzku okruhu.
+ V pripade, ze sme sa pomocou tohoto vyhladavania dostali spat na povodne policko
+ k vyslednemu poctu hladanych moznosti pripocitame jednu. A porovname dlzku tohoto okruhu s poslednym najvacsim.
+
+ Takto prejdeme vsetky volne cesty a vypiseme vysledne hodnoty - Pocet okruhov a dlzku najdlhsieho z nich.
+
+*/
+
+    #include<stdio.h>  
+    #include<stdlib.h>  
+    #include<string.h>  
+    #include<math.h>  
+    #define max 100+5  
+    int num,max_l,t,fflag,vis[150+4][150+4];  
+    char a[150+4][150+4];  
+    void dfs(int x, int y)  
+    {  
+        if(a[x][y]=='/' || a[x][y]=='\\' || vis[x][y])  
+            return ;  
+        if(a[x][y] == '#') //‘#’?fflag=1?num  max_l      
+        {  
+            fflag = 1;  
+            return ;  
+        }  
+        vis[x][y] = 1;  
+        t++;  
+        dfs(x+1,y);  
+        dfs(x-1,y);  
+        dfs(x,y+1);  
+        dfs(x,y-1);  
+        if(a[x+1][y]=='\\' && a[x][y+1]=='\\') //?  
+            dfs(x+1,y+1);  
+        if(a[x][y-1]=='/' && a[x+1][y]=='/')  
+            dfs(x+1,y-1);  
+        if(a[x-1][y]=='/' && a[x][y+1]=='/')  
+            dfs(x-1,y+1);  
+        if(a[x-1][y]=='\\' && a[x][y-1]=='\\')  
+            dfs(x-1,y-1);  
+    }  
+    int main()  
+    {  
+    #ifdef state  
+        freopen("sample.txt","r",stdin);  
+    #endif  
+        int w,h,i,j,cct = 0;  
+        char c;  
+        while(scanf("%d%d",&w,&h), (w || h))  
+        {  
+            printf("Maze #%d:\n",++cct);  
+            num = 0, max_l = 0;  
+            memset(a,0,sizeof(a));  
+            memset(vis,0,sizeof(vis));  
+            for(i = 0; i <= 2*h+1; i++) //   
+            {  
+                a[i][0] = '#';  
+                a[i][2*w+1] = '#';  
+            }  
+            for(i = 0; i <= 2*w+1; i++)  
+            {  
+                a[0][i] = '#';  
+                a[2*h+1][i] = '#';  
+            }  
+            for(i = 1; i <= h; i++)  
+            {  
+                getchar();  
+                for(j = 1; j <= w; j++)  
+                {  
+                    scanf("%c",&c);  
+                    if(c == '/')  
+                    {  
+                        a[2*(i-1)+1][2*(j-1)+1] = '*'; // ? '*' ?  
+                        a[2*(i-1)+1][2*(j-1)+2] = '/';  
+                        a[2*(i-1)+2][2*(j-1)+1] = '/';  
+                        a[2*(i-1)+2][2*(j-1)+2] = '*';  
+                    }  
+                    else  
+                    {  
+                        a[2*(i-1)+1][2*(j-1)+1] = '\\';  
+                        a[2*(i-1)+1][2*(j-1)+2] = '*';  
+                        a[2*(i-1)+2][2*(j-1)+1] = '*';  
+                        a[2*(i-1)+2][2*(j-1)+2] = '\\';  
+                    }  
+                }  
+            }  
+            for(i = 1; i <= 2*h; i++)  
+                for(j = 1; j <= 2*w; j++)  
+                    if(a[i][j]=='*' && !vis[i][j])  
+                    {  
+                        fflag = t = 0;  
+                        dfs(i,j);  
+                        if(!fflag) //  '#' ?  
+                        {  
+                            if(t > max_l)  
+                                max_l = t;  
+                            num++;  
+                        }  
+                    }  
+            if(!num)  
+                printf("There are no cycles.\n\n");  
+            else  
+                printf("%d Cycles; the longest has length %d.\n\n",num,max_l);  
+        }  
+        return 0;  
+    }  
