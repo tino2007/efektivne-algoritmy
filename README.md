@@ -33,7 +33,7 @@ Zoznam
 | The 3n + 1 problem                        | [110101](/110101/) | 1           | Peter Kajan       | Ano      |
 | Stacks of Flapjacks                       | [110402](/110402/) | 2           | Peter Kajan       | Ano      |
 | Automated Judge Script                    | [110305](/110305/) | 1           | Ján Maár          | Ano      |
-| 15-Puzzle Problem                         | [110802](/110802/) | 3           | Ján Maár          | Nie      |
+| 15-Puzzle Problem                         | [110802](/110802/) | 3           | Ján Maár          | Ano      |
 | Self-describing Sequence                  | [110607](/110607/) | 2           | Matúš Marko       | Nie      |
 | Dermuba Triangle                          | [111207](/111207/) | 2           | Matúš Marko       | Nie      |
 | Light                                     | [110701](/110701/) | 1           | Jozef Medveď      | Ano      |
