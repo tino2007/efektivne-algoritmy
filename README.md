@@ -3,11 +3,6 @@ efektivne-algoritmy
 
 Ludia posielajte okomentovane zdrojaky nie prezentacie a wordacke dokumenty.
 
-Kniha
------
-
-https://mega.co.nz/#!WgJWWAwD!Klkmx06TobnChUCCiOyjvOGiK7sbqkza2pePuomTDfQ
-
 Zoznam
 ------
 
@@ -21,20 +16,20 @@ Zoznam
 | Playing With Wheels Shahriar Manzoor      | [110902](/110902/) | 2           | Martin Brzula     | Nie      |
 | Contest Scoreboard Gordon Cormack         | [110207](/110207/) | 1           | Juraj Bubniak     | Ano      |
 | Crypt Kicker Gordon Cormack               | [110204](/110204/) | 2           | Juraj Bubniak     | Ano      |
-| Freckles Gordon Cormack                   | [111001](/111001/) | 2           | Ján Fekeš         | Nie      |
-| CDVII Gordon Cormack                      | [110406](/110406/) | 2           | Ján Fekeš         | Nie      |
+| Freckles Gordon Cormack                   | [111001](/111001/) | 2           | Ján Fekeš         | -        |
+| CDVII Gordon Cormack                      | [110406](/110406/) | 2           | Ján Fekeš         | -        |
 | How Many Fibs? Rujia Liu                  | [110601](/110601/) | 1           | Peter Franček     | Nie      |
 | Summation of Four Primes Shahriar Manzoor | [110705](/110705/) | 2           | Peter Franček     | Nie      |
 | Check the Check Pedro Demasi              | [110107](/110107/) | 1           | Ladislav Gubala   | Nie      |
 | Interpreter Gordon Cormack                | [110106](/110106/) | 2           | Ladislav Gubala   | Nie      |
 | Hanoi Tower Troubles Again! Rujia Liu     | [110908](/110908/) | 3           | Ivan Hraško       | Ano      |
 | A Multiplication Game Gordon Cormack      | [110505](/110505/) | 3           | Ivan Hraško       | Ano      |
-| Primary Arithmetic Gordon Cormack         | [110501](/110501/) | 1           | Pavel Jančiar     | Nie      |
-| Hartals Shahriar Manzoor                  | [110203](/110203/) | 2           | Pavel Jančiar     | Nie      |
+| Primary Arithmetic Gordon Cormack         | [110501](/110501/) | 1           | Pavel Jančiar     | Ano      |
+| Hartals Shahriar Manzoor                  | [110203](/110203/) | 2           | Pavel Jančiar     | Ano      |
 | Tug of War Gordon Cormack                 | [110805](/110805/) | 2           | Jakub Jurčík      | Ano      |
 | Factovisors Gordon Cormack                | [110704](/110704/) | 2           | Jakub Jurčík      | Ano      |
-| Crypt Kicker II Gordon Cormack            | [110304](/110304/) | 2           | Nikoleta Kabáčová | Nie      |
-| File Fragmentation Gordon Cormack         | [110306](/110306/) | 2           | Nikoleta Kabáčová | Nie      |
+| Crypt Kicker II Gordon Cormack            | [110304](/110304/) | 2           | Nikoleta Kabáčová | Ano      |
+| File Fragmentation Gordon Cormack         | [110306](/110306/) | 2           | Nikoleta Kabáčová | Ano      |
 | The 3n + 1 problem Owen Astrakan          | [110101](/110101/) | 1           | Peter Kajan       | Ano      |
 | Stacks of Flapjacks Owen Astrakan         | [110402](/110402/) | 2           | Peter Kajan       | Ano      |
 | Automated Judge Script Pedro Demasi       | [110305](/110305/) | 1           | Ján Maár          | Ano      |
@@ -51,11 +46,11 @@ Zoznam
 | Shoemaker’s Problem Alex Gevak            | [110405](/110405/) | 2           | Peter Otto        | Ano      |
 | Minesweeper Pedro Demasi                  | [110102](/110102/) | 1           | Radoslav Rajčan   | Ano      |
 | Poker Hands Gordon Cormack                | [110202](/110202/) | 2           | Radoslav Rajčan   | Ano      |
-| WERTYU Gordon Cormack                     | [110301](/110301/) | 1           | Matej Tepper      | Nie      |
-| Steps Gordon Cormack                      | [110608](/110608/) | 2           | Matej Tepper      | Nie      |
+| WERTYU Gordon Cormack                     | [110301](/110301/) | 1           | Matej Tepper      | Ano      |
+| Steps Gordon Cormack                      | [110608](/110608/) | 2           | Matej Tepper      | Ano      |
 | Reverse and Add Erick Moreno              | [110502](/110502/) | 1           | Ján Turský        | Ano      |
 | Ones Gordon Cormack                       | [110504](/110504/) | 2           | Ján Turský        | Ano      |
 | Jolly Jumpers Gordon Cormack              | [110201](/110201/) | 1           | Štefan Ušák       | Ano      |
 | Rope Crisis in Ropeland! Shahriar Manzoor | [111302](/111302/) | 2           | Štefan Ušák       | Ano      |
-| Carmichael Numbers Manuel Carro           | [110702](/110702/) | 2           | Martin Jančo      | Nie      |
+| Carmichael Numbers Manuel Carro           | [110702](/110702/) | 2           | Martin Jančo      | Ano      |
 | Euclid Problem Alexander Denisjuk         | [110703](/110703/) | 1           | Martin Jančo      | Nie      |
