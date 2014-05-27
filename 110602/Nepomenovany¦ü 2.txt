@@ -1,23 +1,0 @@
-8.6.2 15-Puzzle ProblemPC/UVa IDs: 110802/10181, Popularity: B, Success rate: average Level: 3The 15-puzzle is a very popular game: you have certainly seen it even if you don’t know it by that name. It is constructed with 15 sliding tiles, each with a different number from 1 to 15, with all tiles packed into a 4 by 4 frame with one tile missing. The object of the puzzle is to arrange the tiles so that they are ordered as below:
-
-The only legal operation is to exchange the missing tile with one of the 2, 3, or 4 tiles it shares an edge with. Consider the following sequence of moves:
-
-We denote moves by the neighbor of the missing tile is swapped with it. Legal values are “R,” “L,” “U,” and “D” for right, left, up, and down, based on the movements of the hole.Given an initial configuration of a 15-puzzle you must determine a sequence of steps that take you to the final state. Each solvable 15-puzzle input requires at most 45 steps to be solved with our judge solution; you are limited to using at most 50 steps to solve the puzzle.
-
-
-
-15 pucle je velmi popularna hra. Isto ste ju uz videli, i ked si neviete spomenut na meno.
-Hra je tvorena 15-timi posuvnymi dlazdicami, kazdy s odlisnim cislom od 1 do 15, a usporiadane v stvorci 4x4 kde jedna dlazdica chyba. Predmetom hadanky je usporiadat dlazdice tak ako su zoradene na obrazku.
-
-Iba povoleny tah ktory sa da vykonavat je vymenenie chybajucej dlazdice s ktorou zdiela hranu 2,3 alebo 4. Zvazte nasledujucu postupnost tahov.
-
-Oznacujeme kroky podla suseda chybajucej dlazdice s ktorou je vymeny. Tato kocka sa vymiena s kockami v smere Hore Dole Dolava a Doprava. Je to zalozene na pohybe a vymene diery(prazdneho policka). Vzhladom na vstupne zadanie 15puciel musime stnovit postupnost krokov ktora nas dovedie do konecneho stavu.Kazde riesenie vstupov 15pucle vyzaduje nanajvys 45 krokov.ktore je potrebne vyriesits vasim hodnotiacim riesenim(zadanim)
-ste obmedzeny pouzit najviac 50 krokov k vyrieseniu.
-
-
-InputThe first line of the input contains an integer n indicating the number of puzzle set inputs. The next 4n lines contain n puzzles at four lines per puzzle. Zero denotes the missing tile.OutputFor each input set you must produce one line of output. If the given initial configura- tion is not solvable, print the line “This puzzle is not solvable.” If the puzzle is solvable, then print the move sequence as described above to solve the puzzle.Sample Input22340 15789 6 10 12 13 14 11 15 13 1 2 4 50379 6 10 12 15 8 11 14Sample OutputLLLDRDRDRThis puzzle is not solvable.
-
-VSTUP
-prvy riadok vstupu pozostava s celych cisiel n indikuje cislo sady vstupov puciel.Dalsi 4n riadok obsahuje n puciel v 4och riadkoch za puzzle. Nula oznacuje chybajucu dlazdicu.
-VYSTUP
-Pre kazdy vstupny subor musim predlozit jeden riadok vystupu. Ak vstupne pociatocne natavenie/riesenie nie je riesitelne, vypis riadok PUZZLE NIE SU RIESITELNE. Ak su pucle neriesitelne vypis pohyb sekvencii vysvetlene nad vyriesenymi puzlami
