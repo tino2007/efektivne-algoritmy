@@ -71,11 +71,6 @@ class Main {
                 l.add(i);
             }
 
-            /*
-             * (e.g. football: similarLetters:[[1,2], [6,7]], nbrSimilarLetters:
-             * 2 for o + 2 for l = 4
-             */
-
             // znovu prejdeme slovom
             for (int i = 0; i < s.length(); ++i) {
 
