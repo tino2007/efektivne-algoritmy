@@ -24,8 +24,8 @@ Zoznam
 | Interpreter Gordon Cormack                | [110106](/110106/) | 2           | Ladislav Gubala   | Nie      |
 | Hanoi Tower Troubles Again! Rujia Liu     | [110908](/110908/) | 3           | Ivan Hraško       | Ano      |
 | A Multiplication Game Gordon Cormack      | [110505](/110505/) | 3           | Ivan Hraško       | Ano      |
-| Primary Arithmetic Gordon Cormack         | [110501](/110501/) | 1           | Pavel Jančiar     | Nie      |
-| Hartals Shahriar Manzoor                  | [110203](/110203/) | 2           | Pavel Jančiar     | Nie      |
+| Primary Arithmetic Gordon Cormack         | [110501](/110501/) | 1           | Pavel Jančiar     | Ano      |
+| Hartals Shahriar Manzoor                  | [110203](/110203/) | 2           | Pavel Jančiar     | Ano      |
 | Tug of War Gordon Cormack                 | [110805](/110805/) | 2           | Jakub Jurčík      | Ano      |
 | Factovisors Gordon Cormack                | [110704](/110704/) | 2           | Jakub Jurčík      | Ano      |
 | Crypt Kicker II Gordon Cormack            | [110304](/110304/) | 2           | Nikoleta Kabáčová | Ano      |
