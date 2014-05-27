@@ -52,5 +52,5 @@ Zoznam
 | Ones Gordon Cormack                       | [110504](/110504/) | 2           | Ján Turský        | Ano      |
 | Jolly Jumpers Gordon Cormack              | [110201](/110201/) | 1           | Štefan Ušák       | Ano      |
 | Rope Crisis in Ropeland! Shahriar Manzoor | [111302](/111302/) | 2           | Štefan Ušák       | Ano      |
-| Carmichael Numbers Manuel Carro           | [110702](/110702/) | 2           | Martin Jančo      | Nie      |
+| Carmichael Numbers Manuel Carro           | [110702](/110702/) | 2           | Martin Jančo      | Ano      |
 | Euclid Problem Alexander Denisjuk         | [110703](/110703/) | 1           | Martin Jančo      | Nie      |
